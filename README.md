@@ -1,6 +1,6 @@
 # rest-common-data
 
-Small data files of real detectors, the inputs of the pipeline tests of
+Small data files of real detectors and fixed simulations, the inputs of the pipeline tests of
 [rest-for-physics-toolkit](https://github.com/rest-for-physics-toolkit/rest-framework) (and of its examples).
 
 The data files are the assets of each release (a tag `v*`), so a test or an example reads a fixed version of
@@ -30,11 +30,20 @@ The first events of a run (the file keeps the name of the run: the run parameter
 | `R03137_Calibration37Ar_Vm_360_Vd_100_Pr_2_Gain_0x0_Shape_0xF_Clock_0x4.root` | 1000 | TREX-DM, both planes (`TREXDM.root`), 37Ar calibration | ROOT file of feminos-daq | `libraries/raw/examples/FeminosRootToRaw.yaml` |
 | `R01928_tagTest_Vm_250_Vd_160_Pr_6_Gain_0x0_Shape_0xF_Clock_0x4-068.aqs` | whole file | TREX-DM (Feminos cards, TCM mode) | `.aqs` | `libraries/raw/examples/MultiFEMINOSToRaw.yaml` |
 
+Simulations of restG4 (whole files; fixed, so the tests check the processing and not Geant4):
+
+| Asset | Events | Generated with | Used by (rest-framework) |
+|---|---|---|---|
+| `Run00010_CosmicNeutrons_IAXO.root` | 10 | `restG4 Neutrons.yaml -e 10` (rest-framework `packages/restG4/examples/13.IAXO`) | `libraries/geant4/examples/Quenching.yaml`, then `Geant4Analysis.yaml` and `libraries/connectors/examples/Geant4ToHits.yaml` |
+| `Run00001_CosmicMuons_IAXO.root` | 20 | `restG4 Muons.yaml -e 20` (13.IAXO) | `libraries/connectors/examples/Geant4ToRawVeto.yaml` |
+| `Run00001_Am241_calibration_AlphaCAMM.root` | 200 | `restG4 Simulation.yaml --set isotope=Am241 --set source=calibration -e 200` (AlphaCAMM repository, `simulations/`) | `libraries/connectors/examples/Geant4ToRaw.yaml`, `Geant4ToDriftHits.yaml` |
+
 ## Generation
 
 The original files are not in the repository. With ROOT in the environment, `./generate.sh <directory>`
 writes in `output/` the first events of each ROOT file of the catalogue found in `<directory>`
-(`CutFile.C`: the first entries of every tree, the other objects as they are) and copies the small files.
+(`CutFile.C`: the first entries of every tree, the other objects as they are) and copies the small files
+and the simulations (generated before in `<directory>` with the commands of the catalogue).
 A new file: a line in the list of `generate.sh` and a row of the catalogue.
 
 ## Release

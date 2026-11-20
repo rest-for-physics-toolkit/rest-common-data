@@ -4,7 +4,7 @@
 #   ./generate.sh <directory with the original files>
 # - ROOT files of the DAQ: the first events of each one (CutFile.C), with the same name (the run parameters
 #   are read from it).
-# - Small files (e.g. a .aqs of the Feminos cards): copied as they are.
+# - Small files (e.g. a .aqs of the Feminos cards) and the restG4 simulations: copied as they are.
 # The table of the files and their number of events is the catalogue of README.md.
 set -euo pipefail
 
@@ -24,6 +24,10 @@ files=(
     "Run03318_Calibration109Cd_TREXDM_DAQ_001.root 500"
     "R03137_Calibration37Ar_Vm_360_Vd_100_Pr_2_Gain_0x0_Shape_0xF_Clock_0x4.root 1000"
     "R01928_tagTest_Vm_250_Vd_160_Pr_6_Gain_0x0_Shape_0xF_Clock_0x4-068.aqs 0"
+    # Simulations (restG4), whole files
+    "Run00010_CosmicNeutrons_IAXO.root 0"
+    "Run00001_CosmicMuons_IAXO.root 0"
+    "Run00001_Am241_calibration_AlphaCAMM.root 0"
 )
 
 for entry in "${files[@]}"; do
