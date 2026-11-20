@@ -27,7 +27,7 @@ The first events of a run (the file keeps the name of the run: the run parameter
 |---|---|---|---|---|
 | `Run00229_Nominal_Test_Calibration_008.root` | 300 | IAXO-D1 Micromegas (`IAXO.root` of rest-common-readouts) | FEMDAQ ROOT file | `examples/FemDAQToTracks.yaml` |
 | `Run03318_Calibration109Cd_TREXDM_DAQ_001.root` | 500 | TREX-DM, both planes (`TREXDM.root`), 109Cd calibration | FEMDAQ ROOT file | `examples/TREXDMToTracks.yaml` |
-| `R03137_Calibration37Ar_Vm_360_Vd_100_Pr_2_Gain_0x0_Shape_0xF_Clock_0x4.root` | 1000 | 37Ar calibration | ROOT file of feminos-daq | `libraries/raw/examples/FeminosRootToRaw.yaml` |
+| `R03137_Calibration37Ar_Vm_360_Vd_100_Pr_2_Gain_0x0_Shape_0xF_Clock_0x4.root` | 1000 | TREX-DM, both planes (`TREXDM.root`), 37Ar calibration | ROOT file of feminos-daq | `libraries/raw/examples/FeminosRootToRaw.yaml` |
 | `R01928_tagTest_Vm_250_Vd_160_Pr_6_Gain_0x0_Shape_0xF_Clock_0x4-068.aqs` | whole file | TREX-DM (Feminos cards, TCM mode) | `.aqs` | `libraries/raw/examples/MultiFEMINOSToRaw.yaml` |
 
 ## Generation
