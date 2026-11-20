@@ -1,0 +1,24 @@
+== Run00229_Nominal_Test_Calibration_008.root
+
+Processing /home/juanan/rest-common-data/CutFile.C+("/home/juanan/restv2/testdata/Run00229_Nominal_Test_Calibration_008.root", "/home/juanan/rest-common-data/output/Run00229_Nominal_Test_Calibration_008.root", 300)...
+Info in <TUnixSystem::ACLiC>: creating shared library /home/juanan/rest-common-data/CutFile_C.so
+SignalEvent: 300 of 4761 entries
+(int) 0
+== Run03318_Calibration109Cd_TREXDM_DAQ_001.root
+
+Processing /home/juanan/rest-common-data/CutFile.C+("/home/juanan/restv2/testdata/Run03318_Calibration109Cd_TREXDM_DAQ_001.root", "/home/juanan/rest-common-data/output/Run03318_Calibration109Cd_TREXDM_DAQ_001.root", 500)...
+SignalEvent: 500 of 17177 entries
+(int) 0
+== R03137_Calibration37Ar_Vm_360_Vd_100_Pr_2_Gain_0x0_Shape_0xF_Clock_0x4.root
+
+Processing /home/juanan/rest-common-data/CutFile.C+("/home/juanan/restv2/testdata/R03137_Calibration37Ar_Vm_360_Vd_100_Pr_2_Gain_0x0_Shape_0xF_Clock_0x4.root", "/home/juanan/rest-common-data/output/R03137_Calibration37Ar_Vm_360_Vd_100_Pr_2_Gain_0x0_Shape_0xF_Clock_0x4.root", 1000)...
+events: 1000 of 85934 entries
+run: 1 of 1 entries
+(int) 0
+== R01928_tagTest_Vm_250_Vd_160_Pr_6_Gain_0x0_Shape_0xF_Clock_0x4-068.aqs
+Assets in /home/juanan/rest-common-data/output:
+total 47424
+-rw-r--r-- 1 juanan juanan   556709 nov 20 23:52 R01928_tagTest_Vm_250_Vd_160_Pr_6_Gain_0x0_Shape_0xF_Clock_0x4-068.aqs
+-rw-r--r-- 1 juanan juanan  8513756 nov 20 23:52 R03137_Calibration37Ar_Vm_360_Vd_100_Pr_2_Gain_0x0_Shape_0xF_Clock_0x4.root
+-rw-r--r-- 1 juanan juanan 33948882 nov 20 23:52 Run00229_Nominal_Test_Calibration_008.root
+-rw-r--r-- 1 juanan juanan  5537244 nov 20 23:52 Run03318_Calibration109Cd_TREXDM_DAQ_001.root
