@@ -4,7 +4,8 @@
 #   ./generate.sh <directory with the original files>
 # - ROOT files of the DAQ: the first events of each one (CutFile.C), with the same name (the run parameters
 #   are read from it).
-# - Small files (e.g. a .aqs of the Feminos cards) and the restG4 simulations: copied as they are.
+# - Small files (e.g. a .aqs of the Feminos cards), the restG4 simulations and the datasets: copied as they
+#   are.
 # The table of the files and their number of events is the catalogue of README.md.
 set -euo pipefail
 
@@ -28,6 +29,9 @@ files=(
     "Run00010_CosmicNeutrons_IAXO.root 0"
     "Run00001_CosmicMuons_IAXO.root 0"
     "Run00001_Am241_calibration_AlphaCAMM.root 0"
+    # Datasets (whole files)
+    "Dataset_IAXO_D1_Run00229_Calibration.root 0"
+    "Dataset_IAXO_D1_Run00228_Background.root 0"
 )
 
 for entry in "${files[@]}"; do
