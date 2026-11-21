@@ -59,8 +59,18 @@ A new file: a line in the list of `generate.sh` and a row of the catalogue.
 The assets are uploaded by hand (the original files are not available to the CI):
 
 ```
-./generate.sh <directory with the original files>
+./generate.sh <directory with the original files> 2>&1 | tee generate.log
 gh release create v1.0 output/* --title v1.0 --notes "Pipeline test data"
 ```
 
-A new version (new or different files) is a new tag; the tests of rest-framework read a fixed tag.
+A new version (new or different files) is a new tag with all the assets; the tests of rest-framework read a
+fixed tag. Without all the original files, from the assets of the previous release and the new files (e.g.
+v1.2, the datasets added to v1.1):
+
+```
+gh release download v1.1 -D release_v1.2
+cp <new files> release_v1.2/
+gh release create v1.2 release_v1.2/* --title v1.2 --notes "<what is new>"
+```
+
+`output/`, `release_*/` and `generate.log` are local (ignored).

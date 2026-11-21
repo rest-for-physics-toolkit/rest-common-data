@@ -2,3 +2,5 @@ output/
 *.so
 *.d
 *.pcm
+generate.log
+release_*/
